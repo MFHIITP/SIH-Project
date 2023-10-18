@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Identifier</title>
+</head>
+<style>
+    .container{
+        display:flex;
+        flex-direction: row;
+        margin-left: 40%;
+        margin-top: 100px;
+    }
+    .input{
+        border:2px solid red;
+        display: block;
+        margin: 12px auto;
+        border-radius: 12px;
+        width:400px;
+        height:50px;
+    }
+    h2{
+        display:block;
+        text-align: center;
+    }
+    .btn{
+        border:2px solid blue;
+        border-radius: 6px;
+        cursor:pointer;
+        display:block;
+        margin:auto;
+        margin-top:20px;
+    }
+    .btn:hover{
+        color: white;
+        background-color: black;
+        text-decoration: underline;
+    }
+    #ImageFile{
+        cursor:pointer;
+    }
+    
+</style>
+<body>
+    <h2>Enter Your Details and Upload Your Image</h2>
+    <div class="container">
+        <form action="/" method="post">
+            <input type="text" name="name" id="name" class="input" placeholder="Enter your name">
+            <input type="number" name="age" id="age" class="input" placeholder="Enter your age">
+            <input type="email" name="email" id="email" class="input" placeholder="Enter your email address">
+            <input type="text" name="address" id="address" class="input" placeholder="Enter your address">
+            <input type="number" name="phone" id="phone" class="input" placeholder="Enter your mobile number">
+            <input type="file" name="Image_File" id="ImageFile" placeholder="Enter only pdf files">
+            <button type="submit" class="btn">Submit Image</button>
+        </form>
+    </div>
+</body>
+</html>
