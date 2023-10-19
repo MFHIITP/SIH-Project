@@ -19,10 +19,18 @@
         border-radius: 12px;
         width:400px;
         height:50px;
+        padding-left:20px;
+        margin-bottom:20px;
     }
     h2{
         display:block;
         text-align: center;
+        width:fit-content;
+        background-color: white;
+        color:black;
+        margin: auto;
+        margin-top: 60px;
+        font-size: 2rem;
     }
     .btn{
         border:2px solid blue;
@@ -39,6 +47,20 @@
     }
     #ImageFile{
         cursor:pointer;
+        color:blue;
+        background-color: aquamarine;
+        border-radius: 12px;
+    }
+    body::before{
+        content: "";
+        background: url('https://th.bing.com/th/id/OIP.RkU2sLdp5LWc0jZdNKCRxAHaEr?pid=ImgDet&rs=1') no-repeat center center/cover;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width:100%;
+        height:100%;
+        z-index: -1;
+        opacity: 0.9;
     }
     
 </style>
