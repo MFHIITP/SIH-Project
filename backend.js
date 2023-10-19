@@ -36,7 +36,7 @@ var Schema = new mongoose.Schema({
     address: String,
     phone: Number,
     Image_File_Uploaded: Object,
-    Image_File_URL: String
+    Image_File_URL: Object
 });
 
 var Collection1 = mongoose.model("Collection 1", Schema);
