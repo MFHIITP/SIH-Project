@@ -32,11 +32,11 @@ connect();
 
 var Schema = new mongoose.Schema({
     name: String,
-    age: Number,
     email: String,
     address: String,
     phone: Number,
-    Image_File: Object
+    Image_File_Uploaded: Object,
+    Image_File_URL: String
 });
 
 var Collection1 = mongoose.model("Collection 1", Schema);
@@ -49,3 +49,5 @@ app.post("/", (req,res)=>{
         res.send("The Data has NOT been saved");
     });
 });
+
+

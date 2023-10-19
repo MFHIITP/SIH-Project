@@ -62,6 +62,21 @@
         z-index: -1;
         opacity: 0.9;
     }
+    #cont_url, #cont_file{
+        display:none;
+    }
+    .btn_in{
+        display: inline;
+        border:2px solid blue;
+        border-radius: 6px;
+        cursor:pointer;
+        margin-top:20px;
+    }
+    .btn_in:hover{
+        color: white;
+        background-color: black;
+        text-decoration: underline;
+    }
     
 </style>
 <body>
@@ -69,13 +84,49 @@
     <div class="container">
         <form action="/" method="post">
             <input type="text" name="name" id="name" class="input" placeholder="Enter your name">
-            <input type="number" name="age" id="age" class="input" placeholder="Enter your age">
             <input type="email" name="email" id="email" class="input" placeholder="Enter your email address">
             <input type="text" name="address" id="address" class="input" placeholder="Enter your address">
             <input type="number" name="phone" id="phone" class="input" placeholder="Enter your mobile number">
-            <input type="file" name="Image_File" id="ImageFile" placeholder="Enter only pdf files">
-            <button type="submit" class="btn">Submit Image</button>
+            
+            <input type="button" value="Input the image as url" class="btn_in" id="Imageinput_url" onclick="hide_url()">
+            <input type="button" value="Upload the image as a file" class="btn_in" id="Imageinput_file" onclick="hide_file()">
+
+            
+            <div id="cont_url">
+                <input type="file" name="Image_File_URL" id="Imagefile" capture="user" accept="image/*">
+            </div>
+            <div id="cont_file">
+                <input type="url" name="Image_File_Uploaded" id="Imageurl" class="input" placeholder="Enter the url of the image">
+            </div>
+            
+            <button type="reset" class="btn">Reset The Entered Values</button>
+            <button type="submit" class="btn" onclick="alerting()">Submit Image</button>
         </form>
     </div>
+    <script>
+        function alerting(){
+            alert("Do you really want to submit the form ?");
+        }
+        function hide_url(){
+            let button = document.getElementById('Imageinput_url');
+            let cont = document.getElementById('cont_url');
+            if(cont.style.display == "none"){
+                cont.style.display="flex";
+            }
+            else{
+                cont.style.display="none";
+            }
+        }
+        function hide_file(){
+            let button = document.getElementById('Imageinput_file');
+            let cont = document.getElementById('cont_file');
+            if(cont.style.display == "none"){
+                cont.style.display="flex";
+            }
+            else{
+                cont.style.display="none";
+            }
+        }
+    </script>
 </body>
 </html>
